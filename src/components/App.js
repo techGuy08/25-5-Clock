@@ -47,8 +47,15 @@ function App() {
     let id = setInterval(() => {
       let now = new Date();
       let timeLeft = new Date(date).getTime() - now.getTime();
+      if (timeLeft <= 1500) {
+        document
+          .getElementById("beep")
+          .play()
+          .catch((err) => console.log(err));
+      }
       if (timeLeft < 0) {
         clearInterval(id);
+
         timerEnded();
       } else {
         setTimerValueMs(timeLeft);
@@ -57,20 +64,13 @@ function App() {
     setTimerID(id);
   };
   const timerEnded = () => {
-    console.log("ended");
     let state = !isBreakTime;
     setIsBreakTime(state);
 
     let length = state ? breakLength : sessionLength;
     setEndDate(null);
-
     setIsTimerRunning(false);
     clearInterval(timerID);
-    document.getElementById("beep").currentTime = 2;
-    document
-      .getElementById("beep")
-      .play()
-      .catch((err) => console.log(err));
     setTimeout(() => {
       setTimerValueMs(length * oneMinMs);
       document.getElementById("start_stop").click();
