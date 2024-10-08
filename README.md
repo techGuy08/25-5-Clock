@@ -1,6 +1,8 @@
 # 25-5-Clock
 
+![Design preview for the 25-5-Clock app coding challenge](./src/assets/preview.JPG)
 
+live demo: https://techguy08.github.io/25-5-clock/
 
 ## Available Scripts
 

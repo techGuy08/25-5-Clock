@@ -1,19 +1,23 @@
+import alarmSound from "../assets/alarm-clock-short-6402.mp3";
 const Main = ({
   isTimerRunning,
   onPlayPause,
   onReset,
   isBreakTime,
   TimerValue,
+  endDate,
 }) => {
   const formatDigit = (n) => {
     return n < 10 ? "0" + n : n;
   };
   const getTimerString = (timeMs) => {
-    let mins = parseInt(timeMs / (60 * 1000));
+    let mins = Math.floor(timeMs / (60 * 1000));
     timeMs -= mins * 60 * 1000;
-    let secs = parseInt(timeMs / 1000);
+    let secs = Math.floor(timeMs / 1000);
+    if (secs < 0 || secs >= 60) {
+      secs = 0;
+    }
     timeMs -= secs * 1000;
-
     return formatDigit(mins) + ":" + formatDigit(secs);
   };
   return (
@@ -52,6 +56,7 @@ const Main = ({
             </div>
           </div>
         </div>
+        <audio src={alarmSound} id="beep"></audio>
       </div>
     </main>
   );
