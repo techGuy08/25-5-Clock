@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/25-5-clock/static/css/main.ebe1a989.css",
-    "main.js": "/25-5-clock/static/js/main.d1d02be7.js",
+    "main.js": "/25-5-clock/static/js/main.5da2e789.js",
     "static/media/alarm-clock-short-6402.mp3": "/25-5-clock/static/media/alarm-clock-short-6402.e79e0abb7c74667ec9d7.mp3",
     "index.html": "/25-5-clock/index.html",
     "main.ebe1a989.css.map": "/25-5-clock/static/css/main.ebe1a989.css.map",
-    "main.d1d02be7.js.map": "/25-5-clock/static/js/main.d1d02be7.js.map"
+    "main.5da2e789.js.map": "/25-5-clock/static/js/main.5da2e789.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe1a989.css",
-    "static/js/main.d1d02be7.js"
+    "static/js/main.5da2e789.js"
   ]
 }
